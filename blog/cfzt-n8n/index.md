@@ -2,6 +2,7 @@
 title: Setting Up Self-hosted n8n with Cloudflare Zero Trust on a Home Server
 description: A step-by-step guide on how to deploy n8n automation tool on a home server with secure external access using Cloudflare Zero Trust, complete with a practical Telegram bot example.
 date: Mar 7 2025
+image: ./n8n-cfzt.jpg
 ---
 Hi, in this post I'm diving into how I set up [n8n](https://n8n.io/), a powerful AI-native workflow automation tool, on my local Orange Pi. The main challenge I faced was that I needed to set up reliable webhook endpoints (especially for Telegram Bot API) on my home server without having DDNS or a static IP address from my ISP (my ISP does provide static IPs, but I didn't want to pay extra for it. Plus, exposing my home server directly to the internet isn't as secure as using a zero trust approach.).
 So, to solve this problem, I secured my setup with [Cloudflare Zero Trust (CFZT)](https://www.cloudflare.com/zero-trust/), which allows me to access my n8n instance from anywhere in the world via the internet and provides stable webhook endpoints that external services can reliably connect to. At the end, I'll also show you how to create a sample AI-enabled Grammarly Telegram bot with n8n that automatically corrects and improves your text.
